@@ -1,0 +1,22 @@
+subprojects {
+    apply plugin: 'java'
+
+    group = 'com.envyful.spigot.papi.bridge'
+    version = '1.0.0'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo.lucko.me/' }
+        maven { url 'https://repo.aikar.co/content/groups/aikar/' }
+        maven { url 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+        maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+        maven { url 'https://jitpack.io' }
+    }
+}
